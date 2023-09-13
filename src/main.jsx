@@ -5,11 +5,16 @@ import App from './App.jsx'
 import './index.css'
 // Library imports
 import ReactDOM from 'react-dom/client';
+import Store from './Redux/Store.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <BrowserRouter>
-        <App />
-        <Toaster />
-    </BrowserRouter>
+    <Provider Store = {Store}>
+
+        <BrowserRouter>
+            <App />
+            <Toaster />
+        </BrowserRouter>
+        
+    </Provider>
     
 )
